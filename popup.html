@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IG Story Viewer Exporter</title>
+  <style>
+    body {
+      width: 320px;
+      margin: 0;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fafafa;
+      color: #262626;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #dbdbdb;
+      padding-bottom: 12px;
+    }
+    .header h2 {
+      font-size: 16px;
+      margin: 0;
+      color: #000;
+    }
+    .badge-icon {
+      font-size: 24px;
+    }
+    .instructions {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #efefef;
+    }
+    .instructions ol {
+      margin: 5px 0 0 15px;
+      padding: 0;
+    }
+    button {
+      width: 100%;
+      background: #0095f6;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #1877f2;
+    }
+    button:disabled {
+      background: #b2dffc;
+      cursor: not-allowed;
+    }
+    #status {
+      margin-top: 12px;
+      font-size: 13px;
+      text-align: center;
+      font-weight: 500;
+    }
+    .success { color: #2e7d32; }
+    .error { color: #ed4956; }
+    .loading { color: #0095f6; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <span class="badge-icon">📸</span>
+    <h2>Story Viewer Exporter</h2>
+  </div>
+
+  <div class="instructions">
+    <b>How to use:</b>
+    <ol>
+      <li>Open Instagram & go to your story.</li>
+      <li>Click on <b>Viewers</b> to open the viewer list modal.</li>
+      <li>Click the button below to export instantly!</li>
+    </ol>
+  </div>
+
+  <button id="exportBtn">📥 Export Viewers (CSV, JSON & Report)</button>
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
